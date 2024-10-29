@@ -6,175 +6,33 @@
   <title>স্বপ্নচূড়া ফাউন্ডেশন</title>
   <style>
     /* General Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: #cccccc;
-      background-color: #2b2b3a;
-    }
-
-    header {
-      background-color: #000000;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #FFD700;
-    }
-
-    .header-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    header .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #FFD700;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #FF4500;
-    }
-
-    .join-us {
-      color: #FFFFFF;
-      background-color: #FF4500;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .donate {
-      color: #FFFFFF;
-      background-color: #FF6347;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .hero {
-      background-color: #000000;
-      color: #FFD700;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    .section {
-      padding: 60px 20px;
-    }
-
-    .about,
-    .contact {
-      background-color: #2b2b3a;
-      color: #FFD700;
-      text-align: center;
-    }
-
-    .services,
-    .projects {
-      background-color: #2b2b3a;
-      color: #FFD700;
-      text-align: center;
-    }
-
-    .services ul {
-      list-style-type: circle;
-      padding-left: 20px;
-      text-align: left;
-      display: inline-block;
-    }
-
-    .project-grid {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .project-item {
-      background-color: #1b1b2a;
-      color: #FFD700;
-      padding: 20px;
-      border-radius: 5px;
-      flex: 1 1 200px;
-      max-width: 200px;
-      text-align: center;
-    }
-
-    .contact-buttons a {
-      margin: 10px;
-      padding: 10px 15px;
-      color: #FFFFFF;
-      background-color: #FF4500;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-
-    .contact-buttons a:hover {
-      background-color: #FF6347;
-    }
-
-    .contact-popup,
-    .donate-popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background-color: #000000;
-      color: #FFD700;
-      border: 2px solid #FFD700;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    .contact-popup button,
-    .donate-popup button {
-      background-color: #FF4500;
-      border: none;
-      color: #FFFFFF;
-      padding: 5px 10px;
-      margin-top: 15px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    footer {
-      background-color: #000000;
-      color: #FFD700;
-      text-align: center;
-      padding: 20px;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #cccccc; background-color: #2b2b3a; }
+    header { background-color: #000000; padding: 20px; display: flex; justify-content: space-between; align-items: center; color: #FFD700; }
+    .header-buttons { display: flex; gap: 10px; }
+    header .logo { font-size: 24px; font-weight: bold; }
+    nav a { margin: 0 15px; color: #FFD700; text-decoration: none; transition: color 0.3s; }
+    nav a:hover { color: #FF4500; }
+    .join-us { color: #FFFFFF; background-color: #FF4500; padding: 10px 15px; text-decoration: none; border-radius: 5px; }
+    .donate { color: #FFFFFF; background-color: #FF6347; padding: 10px 15px; text-decoration: none; border-radius: 5px; cursor: pointer; }
+    .hero { background-color: #000000; color: #FFD700; text-align: center; padding: 100px 20px; }
+    .hero h1 { font-size: 48px; margin-bottom: 10px; }
+    .section { padding: 60px 20px; }
+    .about, .contact { background-color: #2b2b3a; color: #FFD700; text-align: center; }
+    .services, .projects { background-color: #2b2b3a; color: #FFD700; text-align: center; }
+    .services ul { list-style-type: circle; padding-left: 20px; text-align: left; display: inline-block; }
+    .project-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+    .project-item { background-color: #1b1b2a; color: #FFD700; padding: 20px; border-radius: 5px; flex: 1 1 200px; max-width: 200px; text-align: center; }
+    .contact-buttons a { margin: 10px; padding: 10px 15px; color: #FFFFFF; background-color: #FF4500; text-decoration: none; border-radius: 5px; display: inline-block; }
+    .contact-buttons a:hover { background-color: #FF6347; }
+    .contact-popup, .donate-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #000000; color: #FFD700; border: 2px solid #FFD700; border-radius: 10px; width: 300px; text-align: center; z-index: 1000; }
+    .contact-popup button, .donate-popup button { background-color: #FF4500; border: none; color: #FFFFFF; padding: 5px 10px; margin-top: 15px; cursor: pointer; border-radius: 5px; }
+    footer { background-color: #000000; color: #FFD700; text-align: center; padding: 20px; }
     /* Responsive Styles */
     @media (max-width: 768px) {
-      .project-grid {
-        flex-direction: column;
-        align-items: center;
-      }
+      header { flex-direction: column; text-align: center; }
+      nav { display: flex; flex-direction: column; }
+      nav a { margin: 5px 0; }
     }
   </style>
 </head>
@@ -190,13 +48,16 @@
       <a href="#contact">যোগাযোগ</a>
     </nav>
   </header>
-
   <!-- Hero Section -->
   <section class="hero">
     <h1>স্বপ্নচূড়া ফাউন্ডেশন</h1>
     <p>❝চাওয়াটা যখন আল্লাহর কাছে পাওয়াটা তখন নিশ্চিত❞</p>
   </section>
-
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>আমাদের সম্পর্কে</h2>
+    <p>স্বপ্ন পূরণের অঙ্গীকারে, জীবন পরিবর্তনের যাত্রায় আমরা একটি অরাজনৈতিক, অলাভজনক, গ্রামীণভিত্তিক দাতব্য প্রতিষ্ঠান, যারা শিক্ষা, সম্পদ এবং সুযোগ প্রদানের মাধ্যমে সম্প্রদায়গুলিকে উজ্জ্বল ভবিষ্যতের পথে এগিয়ে নিয়ে যেতে প্রতিশ্রুতিবদ্ধ।</p>
+  </section>
   <!-- Our Services Section -->
   <section id="services" class="section services">
     <h2>আমাদের সেবাসমূহ</h2>
@@ -207,7 +68,6 @@
       <li>সমাজকল্যাণে সবার অংশগ্রহণে উৎসাহ প্রদান</li>
     </ul>
   </section>
-
   <!-- Projects Section -->
   <section id="projects" class="section projects">
     <h2>প্রকল্পসমূহ</h2>
@@ -218,7 +78,6 @@
       <div class="project-item">প্রকল্প ৪</div>
     </div>
   </section>
-
   <!-- Contact Section -->
   <section id="contact" class="section contact">
     <h2>মতামত দিন</h2>
@@ -232,7 +91,7 @@
       <button onclick="closePhone()">Close</button>
     </div>
     <div id="donatePopup" class="donate-popup">
-      <p>Send Money via Bkash or Nagad to: 01735418275</p>
+      <p>Send Money via Bkash/Nagad to: 01735418275</p>
       <button onclick="closeDonate()">Close</button>
     </div>
   </section>
