@@ -39,16 +39,18 @@
 
     nav {
       display: flex;
-      gap: 20px; /* Adjusted gap between navigation items */
-      flex-wrap: wrap; /* Allow items to wrap to next line if screen is too small */
+      justify-content: space-between;  /* Adjust to make them in a row */
+      align-items: center;
+      width: 100%;
     }
 
     nav a {
-      margin: 0;
+      margin: 0 10px;
       color: #FFD700;
       text-decoration: none;
       transition: color 0.3s;
-      font-size: 16px; /* Adjusted font size */
+      font-size: 16px;
+      padding: 10px;
     }
 
     nav a:hover {
@@ -107,7 +109,7 @@
       padding-left: 20px;
       text-align: left;
       display: inline-block;
-      font-size: 1.5rem; /* Increased font size */
+      font-size: 1.5rem;
     }
 
     .services li {
@@ -194,19 +196,19 @@
       }
 
       nav {
-        flex-direction: row; /* Ensure nav items stay in a row on small screens */
-        justify-content: space-between; /* Add space between items */
+        flex-direction: row;
+        justify-content: space-evenly;  /* Ensure space is even between items */
         align-items: center;
       }
 
       nav a {
         font-size: 14px;
         margin: 5px; /* Adjust margin to create space between items */
-        padding: 10px 15px; /* Increased padding for better clickability */
+        padding: 8px 15px;
       }
 
       .services ul {
-        font-size: 1.2rem; /* Adjusted font size */
+        font-size: 1.2rem; /* Adjust font size */
       }
 
       .project-grid {
