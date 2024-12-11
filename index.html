@@ -39,8 +39,8 @@
 
     nav {
       display: flex;
-      gap: 30px; /* Increased gap between navigation items */
-      flex-wrap: wrap;
+      gap: 20px; /* Adjusted gap between navigation items */
+      flex-wrap: wrap; /* Allow items to wrap to next line if screen is too small */
     }
 
     nav a {
@@ -194,9 +194,15 @@
       }
 
       nav {
-        flex-direction: column; /* Stack the nav items vertically */
+        flex-direction: row; /* Ensure nav items stay in a row on small screens */
+        justify-content: space-between; /* Add space between items */
         align-items: center;
-        gap: 15px; /* Adjusted gap between items */
+      }
+
+      nav a {
+        font-size: 14px;
+        margin: 5px; /* Adjust margin to create space between items */
+        padding: 10px 15px; /* Increased padding for better clickability */
       }
 
       .services ul {
@@ -223,9 +229,9 @@
         font-size: 18px;
       }
 
-      nav a {
-        font-size: 14px;
-        margin: 5px; /* Adjusted margin to create space between items */
+      .services ul {
+        font-size: 1rem;
+        margin: 0;
       }
     }
 
