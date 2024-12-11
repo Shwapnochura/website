@@ -100,6 +100,11 @@
       padding-left: 20px;
       text-align: left;
       display: inline-block;
+      font-size: 1.5rem; /* Increased font size */
+    }
+
+    .services li {
+      margin-bottom: 10px;
     }
 
     .project-grid {
@@ -177,9 +182,37 @@
 
     /* Responsive Styles */
     @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .services ul {
+        font-size: 1.2rem; /* Adjusted font size */
+      }
+
       .project-grid {
         flex-direction: column;
         align-items: center;
+      }
+
+      .project-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .join-us,
+      .donate {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .header .logo {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
       }
     }
 
@@ -260,25 +293,26 @@
 
   <!-- Footer -->
   <footer>
-    <p>© ২০২৪ স্বপ্নচূড়া ফাউন্ডেশন</p>
+    <p>&copy; 2024 স্বপ্নচূড়া ফাউন্ডেশন. All Rights Reserved.</p>
   </footer>
 
+  <!-- JavaScript -->
   <script>
-    function showPhone(event) {
-      event.preventDefault();
-      document.getElementById("phonePopup").style.display = "block";
-    }
-
-    function closePhone() {
-      document.getElementById("phonePopup").style.display = "none";
-    }
-
     function showDonate() {
-      document.getElementById("donatePopup").style.display = "block";
+      document.getElementById('donatePopup').style.display = 'block';
     }
 
     function closeDonate() {
-      document.getElementById("donatePopup").style.display = "none";
+      document.getElementById('donatePopup').style.display = 'none';
+    }
+
+    function showPhone(event) {
+      event.preventDefault();
+      document.getElementById('phonePopup').style.display = 'block';
+    }
+
+    function closePhone() {
+      document.getElementById('phonePopup').style.display = 'none';
     }
   </script>
 </body>
