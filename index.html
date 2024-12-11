@@ -29,7 +29,7 @@
 
     .header-buttons {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     header .logo {
@@ -37,20 +37,11 @@
       font-weight: bold;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;  /* Adjust to make them in a row */
-      align-items: center;
-      width: 100%;
-    }
-
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       color: #FFD700;
       text-decoration: none;
       transition: color 0.3s;
-      font-size: 16px;
-      padding: 10px;
     }
 
     nav a:hover {
@@ -109,7 +100,7 @@
       padding-left: 20px;
       text-align: left;
       display: inline-block;
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* Increased font size */
     }
 
     .services li {
@@ -195,20 +186,8 @@
         font-size: 32px;
       }
 
-      nav {
-        flex-direction: row;
-        justify-content: space-evenly;  /* Ensure space is even between items */
-        align-items: center;
-      }
-
-      nav a {
-        font-size: 14px;
-        margin: 5px; /* Adjust margin to create space between items */
-        padding: 8px 15px;
-      }
-
       .services ul {
-        font-size: 1.2rem; /* Adjust font size */
+        font-size: 1.2rem; /* Adjusted font size */
       }
 
       .project-grid {
@@ -231,9 +210,9 @@
         font-size: 18px;
       }
 
-      .services ul {
-        font-size: 1rem;
-        margin: 0;
+      nav a {
+        font-size: 14px;
+        margin: 0 10px;
       }
     }
 
@@ -302,19 +281,15 @@
       <a href="mailto:shopnochura1027@gmail.com">Email</a>
       <a href="#" onclick="showPhone(event)">Phone</a>
     </div>
+    <div id="phonePopup" class="contact-popup">
+      <p>Phone Number: 01735418275</p>
+      <button onclick="closePhone()">Close</button>
+    </div>
+    <div id="donatePopup" class="donate-popup">
+      <p>Send Money via Bkash or Nagad to: 01735418275</p>
+      <button onclick="closeDonate()">Close</button>
+    </div>
   </section>
-
-  <!-- Donate Popup -->
-  <div id="donatePopup" class="donate-popup">
-    <p>অনুগ্রহ করে আমাদের সহায়তা দিন</p>
-    <button onclick="closeDonate()">Close</button>
-  </div>
-
-  <!-- Phone Popup -->
-  <div id="phonePopup" class="contact-popup">
-    <p>01735418275</p>
-    <button onclick="closePhone()">Close</button>
-  </div>
 
   <!-- Footer -->
   <footer>
