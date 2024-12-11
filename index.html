@@ -16,20 +16,17 @@
       font-family: Arial, sans-serif;
       color: #cccccc;
       background-color: #2b2b3a;
+      line-height: 1.6;
+      position: relative;
     }
 
     header {
       background-color: #000000;
-      padding: 20px;
+      padding: 10px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       color: #FFD700;
-    }
-
-    .header-buttons {
-      display: flex;
-      gap: 10px;
     }
 
     header .logo {
@@ -37,300 +34,314 @@
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
     nav a {
-      margin: 0 15px;
       color: #FFD700;
       text-decoration: none;
-      transition: color 0.3s;
+      padding: 8px 15px;
+      border: 2px solid transparent;
+      transition: 0.3s ease-in-out;
+      display: block;
+      width: 100%;
+      text-align: center;
     }
 
     nav a:hover {
-      color: #FF4500;
+      background-color: #FF4500;
+      color: #FFFFFF;
+      border-radius: 5px;
+    }
+
+    .join-us, .donate {
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      width: 80%;
+      text-align: center;
     }
 
     .join-us {
-      color: #FFFFFF;
+      background-color: #FFD700;
+      color: #000000;
+    }
+
+    .join-us:hover {
       background-color: #FF4500;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
+      color: #FFFFFF;
     }
 
     .donate {
-      color: #FFFFFF;
       background-color: #FF6347;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
+      color: #FFFFFF;
+    }
+
+    .donate:hover {
+      background-color: #FFD700;
+      color: #000000;
     }
 
     .hero {
-      background-color: #000000;
+      background: linear-gradient(to bottom, #000000, #2b2b3a);
       color: #FFD700;
       text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    .section {
       padding: 60px 20px;
     }
 
-    .about,
-    .contact {
-      background-color: #2b2b3a;
-      color: #FFD700;
-      text-align: center;
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 5px #FF4500;
     }
 
-    .services,
-    .projects {
-      background-color: #2b2b3a;
-      color: #FFD700;
+    .hero p {
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .section {
+      padding: 40px 20px;
       text-align: center;
     }
 
     .services ul {
-      list-style-type: circle;
-      padding-left: 20px;
-      text-align: left;
-      display: inline-block;
-      font-size: 1.5rem; /* Increased font size */
+      list-style: none;
+      margin: 20px auto;
+      padding: 0;
+      max-width: 90%;
     }
 
     .services li {
-      margin-bottom: 10px;
+      background: #1b1b2a;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      transition: transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+    }
+
+    .services li:hover {
+      transform: scale(1.05);
+      background-color: #FF4500;
+      color: #FFFFFF;
+      box-shadow: 0 0 10px #FF6347;
+      text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
     }
 
     .project-grid {
       display: flex;
+      flex-direction: column;
       gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .project-item {
       background-color: #1b1b2a;
       color: #FFD700;
       padding: 20px;
-      border-radius: 5px;
-      flex: 1 1 200px;
-      max-width: 200px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 350px;
       text-align: center;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      margin: 0 auto;
     }
 
     .project-item:hover {
       transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5);
     }
 
     .contact-buttons a {
       margin: 10px;
-      padding: 10px 15px;
-      color: #FFFFFF;
+      padding: 12px 20px;
       background-color: #FF4500;
+      color: #FFFFFF;
       text-decoration: none;
       border-radius: 5px;
+      font-size: 18px;
       display: inline-block;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      width: 80%;
+      text-align: center;
     }
 
     .contact-buttons a:hover {
       background-color: #FF6347;
+      box-shadow: 0 0 10px #FF4500;
     }
 
-    .contact-popup,
-    .donate-popup {
+    .contact-popup, .donate-popup {
       display: none;
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background: #1b1b2a;
       padding: 20px;
-      background-color: #000000;
       color: #FFD700;
-      border: 2px solid #FFD700;
-      border-radius: 10px;
-      width: 300px;
+      border-radius: 5px;
       text-align: center;
+      width: 80%;
+      max-width: 350px;
+      box-shadow: 0 0 20px #FF6347;
       z-index: 1000;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .contact-popup button,
-    .donate-popup button {
-      background-color: #FF4500;
-      border: none;
-      color: #FFFFFF;
-      padding: 5px 10px;
-      margin-top: 15px;
-      cursor: pointer;
-      border-radius: 5px;
+    .contact-popup {
+      bottom: 20px;
+    }
+
+    .donate-popup {
+      top: 50px;
     }
 
     footer {
       background-color: #000000;
       color: #FFD700;
-      text-align: center;
       padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 2px solid #FFD700;
     }
 
     /* Responsive Styles */
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+
+      header .logo {
+        font-size: 20px;
+      }
+
       .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
-      .services ul {
-        font-size: 1.2rem; /* Adjusted font size */
+      .hero p {
+        font-size: 16px;
       }
 
-      .project-grid {
-        flex-direction: column;
-        align-items: center;
+      .services li {
+        font-size: 14px;
       }
 
       .project-item {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .join-us,
-      .donate {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
-
-      .header .logo {
-        font-size: 18px;
-      }
-
-      nav a {
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-      /* Adding more space between sections on mobile */
-      .section {
-        padding: 80px 20px; /* Increase padding for better separation */
-      }
-
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 15px; /* Add more space between the navigation links */
-        align-items: center;
+        width: 90%;
       }
 
       .contact-buttons a {
-        margin: 15px; /* Increased margin for buttons */
+        font-size: 16px;
       }
     }
 
-    /* Bounce Effect */
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
+    /* Mobile only adjustments */
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 16px;
+        padding: 10px 20px;
       }
-      50% {
-        transform: translateY(-10px);
+      
+      .join-us, .donate {
+        width: 90%;
       }
-      100% {
-        transform: translateY(0);
-      }
-    }
 
-    .bounce {
-      animation: bounce 0.5s ease-in-out;
+      .contact-buttons a {
+        width: 90%;
+      }
+
+      footer {
+        font-size: 12px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="logo">স্বপ্নচূড়া ফাউন্ডেশন</div>
     <nav>
       <a href="https://shwapnochura.github.io/Membership-Form/" target="_blank" class="join-us">যোগ দিন</a>
       <a href="#" class="donate" onclick="showDonate()">দান করুন</a>
-      <a href="#services">সেবাসমূহ</a>
+      <a href="#services">সেবা</a>
       <a href="#about">আমাদের সম্পর্কে</a>
       <a href="#contact">যোগাযোগ</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <h1>স্বপ্নচূড়া ফাউন্ডেশন</h1>
     <p>❝চাওয়াটা যখন আল্লাহর কাছে পাওয়াটা তখন নিশ্চিত❞</p>
   </section>
 
-  <!-- Our Services Section -->
   <section id="services" class="section services">
-    <h2>আমাদের সেবাসমূহ</h2>
+    <h2>আমাদের সেবা</h2>
     <ul>
-      <li>অসহায় মেধাবী শিক্ষার্থীদের জন্য শিক্ষাসামগ্রী</li>
-      <li>উৎসব ও দুর্যোগে খাদ্য, পোশাক ও পানির সহায়তা</li>
-      <li>রোগীদের জন্য জরুরি রক্তের ব্যবস্থা</li>
-      <li>সমাজকল্যাণে সবার অংশগ্রহণে উৎসাহ প্রদান</li>
+      <li>অসহায় মানুষের সহায়তা</li>
+      <li>অন্যায় ছাত্রদের জন্য শিক্ষামূলক উপকরণ</li>
+      <li>উৎসব এবং দুর্যোগকালীন খাদ্য, কাপড় এবং পানি বিতরণ</li>
+      <li>জরুরি রক্তদান সহায়তা</li>
+      <li>সমাজকল্যাণে জনগণের অংশগ্রহণ উৎসাহিত করা</li>
     </ul>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="section projects">
     <h2>প্রকল্পসমূহ</h2>
     <div class="project-grid">
-      <div class="project-item bounce" onclick="window.open('https://drive.google.com/drive/folders/1uz-iEKmZcOeGcWv7db19s5TvnUlxU3iO?usp=sharing', '_blank')">শীতবস্ত্র বিতরণ</div>
-      <div class="project-item bounce" onclick="window.open('https://drive.google.com/drive/folders/1CwadUgySSfd2by1oxwq1baMidxc3OFjz?usp=sharing', '_blank')">কম্বল বিতরণ</div>
+      <div class="project-item" onclick="window.open('https://drive.google.com/drive/folders/1uz-iEKmZcOeGcWv7db19s5TvnUlxU3iO', '_blank')">শীতবস্ত্র বিতরণ</div>
+      <div class="project-item" onclick="window.open('https://drive.google.com/drive/folders/1mIC58BHO0pzz8W4LZtGJv6MKh1eXsZ9c', '_blank')">কম্বল বিতরণ</div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
+  <section id="contact" class="section">
     <h2>যোগাযোগ</h2>
     <div class="contact-buttons">
       <a href="https://www.facebook.com/profile.php?id=61567875719899" target="_blank">Facebook</a>
       <a href="mailto:shopnochura1027@gmail.com">Email</a>
-      <a href="#" onclick="showPhone(event)">Phone</a>
-    </div>
-    <div id="phonePopup" class="contact-popup">
-      <p>01735418275</p>
-      <button onclick="hidePhone()">Close</button>
+      <a href="javascript:void(0);" onclick="showPhone()">Phone</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2024 স্বপ্নচূড়া ফাউন্ডেশন. সর্বস্বত্ব সংরক্ষিত।</p>
+    <p>&copy; 2024 স্বপ্নচূড়া ফাউন্ডেশন | All Rights Reserved</p>
   </footer>
 
-  <!-- Popup for Donate Section -->
-  <div id="donatePopup" class="donate-popup">
-    <p>আপনার দান আমাদের সাহায্য করবে।</p>
-    <button onclick="hideDonate()">Close</button>
+  <!-- Popups -->
+  <div id="phone-popup" class="contact-popup">
+    <h3>ফোন নম্বর:</h3>
+    <p>01735418275</p>
+    <button onclick="document.getElementById('phone-popup').style.display = 'none';">Close</button>
+  </div>
+
+  <div id="donate-popup" class="donate-popup">
+    <h3>দান করুন</h3>
+    <p>আপনার দানে সাহায্য করুন।</p>
+    <button onclick="document.getElementById('donate-popup').style.display = 'none';">Close</button>
   </div>
 
   <script>
+    function showPhone() {
+      document.body.style.overflow = 'hidden';
+      document.getElementById('phone-popup').style.display = 'block';
+    }
+
     function showDonate() {
-      document.getElementById("donatePopup").style.display = "block";
+      document.getElementById('donate-popup').style.display = 'block';
     }
-
-    function hideDonate() {
-      document.getElementById("donatePopup").style.display = "none";
-    }
-
-    function showPhone(event) {
-      event.preventDefault();
-      document.getElementById("phonePopup").style.display = "block";
-    }
-
-    function hidePhone() {
-      document.getElementById("phonePopup").style.display = "none";
-    }
+    
+    document.querySelectorAll('button').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.body.style.overflow = 'auto';
+      });
+    });
   </script>
 </body>
 </html>
