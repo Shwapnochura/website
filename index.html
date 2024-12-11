@@ -215,13 +215,20 @@
         margin: 0 10px;
       }
 
-      /* Increase space between nav items on mobile */
-      nav a {
-        margin: 0 20px; /* Increased margin between items */
+      /* Adding more space between sections on mobile */
+      .section {
+        padding: 80px 20px; /* Increase padding for better separation */
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Add more space between the navigation links */
+        align-items: center;
       }
 
       .contact-buttons a {
-        margin: 15px; /* Added more space between contact buttons */
+        margin: 15px; /* Increased margin for buttons */
       }
     }
 
@@ -291,38 +298,38 @@
       <a href="#" onclick="showPhone(event)">Phone</a>
     </div>
     <div id="phonePopup" class="contact-popup">
-      <p>Phone Number: 01735418275</p>
-      <button onclick="closePhone()">Close</button>
-    </div>
-    <div id="donatePopup" class="donate-popup">
-      <h3>Donate Now</h3>
-      <p>Donate to help us continue our efforts in supporting the community.</p>
-      <button onclick="closeDonate()">Close</button>
+      <p>01735418275</p>
+      <button onclick="hidePhone()">Close</button>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 স্বপ্নচূড়া ফাউন্ডেশন</p>
+    <p>© 2024 স্বপ্নচূড়া ফাউন্ডেশন. সর্বস্বত্ব সংরক্ষিত।</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Popup for Donate Section -->
+  <div id="donatePopup" class="donate-popup">
+    <p>আপনার দান আমাদের সাহায্য করবে।</p>
+    <button onclick="hideDonate()">Close</button>
+  </div>
+
   <script>
     function showDonate() {
-      document.getElementById('donatePopup').style.display = 'block';
+      document.getElementById("donatePopup").style.display = "block";
     }
 
-    function closeDonate() {
-      document.getElementById('donatePopup').style.display = 'none';
+    function hideDonate() {
+      document.getElementById("donatePopup").style.display = "none";
     }
 
     function showPhone(event) {
       event.preventDefault();
-      document.getElementById('phonePopup').style.display = 'block';
+      document.getElementById("phonePopup").style.display = "block";
     }
 
-    function closePhone() {
-      document.getElementById('phonePopup').style.display = 'none';
+    function hidePhone() {
+      document.getElementById("phonePopup").style.display = "none";
     }
   </script>
 </body>
